@@ -15,9 +15,13 @@ public class BookController {
     return "index";
   }
 
-  @RequestMapping(name = "/xinChao", method = RequestMethod.GET)
-  public String hello(Model model, @RequestParam String name){
-    model.addAttribute("name", name);
+  @RequestMapping(name = "/hello", method = RequestMethod.GET)
+  public String hello(Model model){
     return "hello";
+  }
+
+  @GetMapping("/login")
+  public String login(){
+    return "login";
   }
 }
